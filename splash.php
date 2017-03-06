@@ -1,5 +1,5 @@
 <?php
-$uam_secret = "verysecretstring";
+$uam_secret = "J3ZYzRpqBC";
 
 function encode_password($plain, $challenge, $secret) {
 	if ((strlen($challenge) % 2) != 0 ||
