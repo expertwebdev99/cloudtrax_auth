@@ -136,15 +136,15 @@ function print_logon_form() {
                   <td><input class="inputbox" name="phoneNumber" type="Integer "></td>
                 </tr>
 
+				<!-- <tr>
+				                  <th>User Name:</th>
+				                  <td><input class="inputbox" name="username"></td>
+				                </tr>
+				
 				<tr>
-                  <th>User Name:</th>
-                  <td><input class="inputbox" name="username"></td>
-                </tr>
-
-				<tr>
-                  <th>Password:</th>
-                  <td><input class="inputbox" name="password" type="password"></td>
-                </tr>
+				                  <th>Password:</th>
+				                  <td><input class="inputbox" name="password" type="password"></td>
+				                </tr> -->
 				
 
                 <tr>
@@ -249,8 +249,8 @@ if($_SERVER['REQUEST_METHOD'] === 'GET') {
 } else if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $uamip = $_POST['uamip'];
   $uamport = $_POST['uamport'];
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  $username = 'testuser';//$_POST['username'];
+  $password = 'ThisIsThePassword';//$_POST['password'];
   $challenge = $_POST['challenge'];
   $encoded_password = encode_password($password, $challenge, $uam_secret);
 
