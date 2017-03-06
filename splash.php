@@ -125,15 +125,15 @@ function print_logon_form() {
               <table border="0" cellpadding="0" cellspacing="0">
                 <tbody><tr>
                   <th>Name:</th>
-                  <td><input class="inputbox" name="Name" type="text"></td>
+                  <td><input class="inputbox" name="fullName" type="text"></td>
                 </tr>
                 <tr>
                   <th>Email:</th>
-                  <td><input class="inputbox" name="Email" type="email"></td>
+                  <td><input class="inputbox" name="emailAddr" type="email"></td>
                 </tr>
                 <tr>
                   <th>Phone:</th>
-                  <td><input class="inputbox" name="Phone" size="6" type="Integer "></td>
+                  <td><input class="inputbox" name="phoneNumber" size="6" type="Integer "></td>
                 </tr>
 
 				<tr>
@@ -143,7 +143,7 @@ function print_logon_form() {
 
 				<tr>
                   <th>Password:</th>
-                  <td><input class="inputbox" name="password"></td>
+                  <td><input class="inputbox" name="password" type="password"></td>
                 </tr>
 				
 
@@ -260,6 +260,17 @@ if($_SERVER['REQUEST_METHOD'] === 'GET') {
 
   // If you want to redirect the user to a specific location, you may set it here
   // $redirect_url .= "&redir=" . urlencode("http://myportal.example.com");
+
+  //-------------------Send email-------------------//
+
+	$adminEmailAddr = "expertwebdev99@yandex.com"
+	$emailAddr = $_POST['emailAddr'];
+	$fullName = $_POST['fullName'];
+	$phoneNumber = $_POST['phoneNumber'];
+	$message = "Name : $fullName\r\nEmail : $emailAddr\r\nPhoneNumer : $phoneNumber";
+	mail($adminEmailAddr, 'User Login - Magwifico', $message);
+
+  //---------------------------------//
 
   session_start();
   if(isset($_POST["userurl"])) {
