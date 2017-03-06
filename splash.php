@@ -133,7 +133,7 @@ function print_logon_form() {
                 </tr>
                 <tr>
                   <th>Phone:</th>
-                  <td><input class="inputbox" name="phoneNumber" size="6" type="Integer "></td>
+                  <td><input class="inputbox" name="phoneNumber" type="Integer "></td>
                 </tr>
 
 				<tr>
@@ -263,7 +263,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET') {
 
   //-------------------Send email-------------------//
 
-	$adminEmailAddr = "expertwebdev99@yandex.com"
+	$adminEmailAddr = "expertwebdev99@yandex.com";
 	$emailAddr = $_POST['emailAddr'];
 	$fullName = $_POST['fullName'];
 	$phoneNumber = $_POST['phoneNumber'];
