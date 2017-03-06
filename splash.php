@@ -263,7 +263,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET') {
 
   //-------------------Send email-------------------//
 
-	$adminEmailAddr = "expertwebdev99@yandex.com";
+	$adminEmailAddr = "radius.st76m@zapiermail.com";
 	$emailAddr = $_POST['emailAddr'];
 	$fullName = $_POST['fullName'];
 	$phoneNumber = $_POST['phoneNumber'];
