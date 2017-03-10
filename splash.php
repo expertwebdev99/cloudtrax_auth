@@ -64,7 +64,7 @@ function print_logon_form() {
           <div class="form-save-data float-right">
             <p class="free-wifi">Free Wifi</p>
             <p>Ingresa tus datos para 'Continuar'.</p>
-            <form method="post">
+			<form method="post">
               <div class="form-group">
                 <input type="text" class="form-control" name="fullName" id="nombreCompleto" placeholder="Nombre completo" required/>
               </div>
