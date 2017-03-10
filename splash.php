@@ -34,123 +34,47 @@ function encode_password($plain, $challenge, $secret) {
 function print_logon_form() {
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <title>FREE WIFI Arcador - Magwifico | Connect</title>
-    <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- styles -->
-    <link href="css/custom.css" rel="stylesheet">
-    </style>
-    <script language="javascript" type="text/javascript">
-      function toggle_visibility(id) {
-        var e = document.getElementById(id);
-        if (e.style.display == 'block') {
-          e.style.display = 'none';
-        } else {
-          e.style.display = 'block';
-        }
-      }
-    </script>
-  </head>
-  <!-- Change the background color and add an image here -->
-  <body style="background-image : url('img/background.jpg');">
-    <div class="container">
-      <!-- Logo -->
-      <div class="page-header" style="background-color:black">
-        <img alt="CloudTrax Logo" src="img/logo.jpg">
-      </div>
-      <!-- Header Image * ID "rounded" automatically adds rounded corners -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="images/icons/favicon.ico" rel="icon" type="image/x-icon" />
   
-      <!-- Main Content -->
-      <!-- Left Column -->
+  <title>Bienvenidos | MagWifiCo</title>
+  <!-- bootstrap & normalize -->
+  <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="css/magwifico.css" />
+</head>
+<body>
+  <div class="page-wrap bg-full bg-full--shop">
+    <div class="container">
+
       <div class="row">
-        <div class="span4">
-          <h1>Welcome to FREE WIFI Arcador - Magwifico</h1>
-          <div class="mobileonly">
-            <a class="showLink" onclick="toggle_visibility('welcome');">
-              <p>Show/Hide Welcome Message and Terms</p>
-            </a>
-          </div>
-          <div id="welcome" class="welcome">
-            <p><strong>By continuing, you agree to the terms and conditions.</strong></p>
-            <div style="height:140px;width:97%;border:1px solid #ccc;overflow:auto;margin-bottom:15px;padding:5px;">
-            <p><small><strong>Terms and Conditions</strong></small></p>
-            <p><small>By using our internet service, you hereby expressly acknowledge and agree that there are significant security, privacy and confidentiality risks inherent in accessing or transmitting information through the internet, whether the connection is facilitated through wired or wireless technology. Security issues include, without limitation, interception of transmissions, loss of data, and the introduction of viruses and other programs that can corrupt or damage your computer.</small></p>
-            <p><small>Accordingly, you agree that the owner and/or provider of this network is NOT liable for any interception or transmissions, computer worms or viruses, loss of data, file corruption, hacking or damage to your computer or other devices that result from the transmission or download of information or materials through the internet service provided.</small></p>
-            <p><small>Use of the wireless network is subject to the general restrictions outlined below. If abnormal, illegal, or unauthorized behavior is detected, including heavy consumption of bandwidth, the network provider reserves the right to permanently disconnect the offending device from the wireless network.</small></p>
-            <p><small><strong>Examples of Illegal Uses</strong></small></p>
-            <p><small>The following are representative examples only and do not comprise a comprehensive list of illegal uses:</small></p>
-            <ol>
-              <li>Spamming and invasion of privacy - Sending of unsolicited bulk and/or commercial messages over the Internet using the Service or using the Service for activities that invade another's privacy.</li>
-              <li>Intellectual property right violations - Engaging in any activity that infringes or misappropriates the intellectual property rights of others, including patents, copyrights, trademarks, service marks, trade secrets, or any other proprietary right of any third party.</li>
-              <li>Accessing illegally or without authorization computers, accounts, equipment or networks belonging to another party, or attempting to penetrate/circumvent security measures of another system. This includes any activity that may be used as a precursor to an attempted system penetration, including, but not limited to, port scans, stealth scans, or other information gathering activity.</li>
-              <li>The transfer of technology, software, or other materials in violation of applicable export laws and regulations.</li>
-              <li>Export Control Violations</li>
-              <li>Using the Service in violation of applicable law and regulation, including, but not limited to, advertising, transmitting, or otherwise making available ponzi schemes, pyramid schemes, fraudulently charging credit cards, pirating software, or making fraudulent offers to sell or buy products, items, or services.</li>
-              <li>Uttering threats;</li>
-              <li>Distribution of pornographic materials to minors;</li>
-              <li>and Child pornography. </li>
-            </ol>
-            <p><small><strong>Examples of Unacceptable Uses</strong></small></p>
-            <p><small>The following are representative examples only and do not comprise a comprehensive list of unacceptable uses:</small></p>
-            <ol>
-              <li>High bandwidth operations, such as large file transfers and media sharing with peer-to-peer programs (i.e.torrents)</li>
-              <li>Obscene or indecent speech or materials</li>
-              <li>Defamatory or abusive language</li>
-              <li>Using the Service to transmit, post, upload, or otherwise making available defamatory, harassing, abusive, or threatening material or language that encourages bodily harm, destruction of property or harasses another.</li>
-              <li>Forging or misrepresenting message headers, whether in whole or in part, to mask the originator of the message.</li>
-              <li>Facilitating a Violation of these Terms of Use</li>
-              <li>Hacking</li>
-              <li>Distribution of Internet viruses, Trojan horses, or other destructive activities</li>
-              <li>Distributing information regarding the creation of and sending Internet viruses, worms, Trojan horses, pinging, flooding, mail-bombing, or denial of service attacks. Also, activities that disrupt the use of or interfere with the ability of others to effectively use the node or any connected network, system, service, or equipment.</li>
-              <li>Advertising, transmitting, or otherwise making available any software product, product, or service that is designed to violate these Terms of Use, which includes the facilitation of the means to spam, initiation of pinging, flooding, mail-bombing, denial of service attacks, and piracy of software.</li>
-              <li>The sale, transfer, or rental of the Service to customers, clients or other third parties, either directly or as part of a service or product created for resale.</li>
-              <li>Seeking information on passwords or data belonging to another user.</li>
-              <li>Making unauthorized copies of proprietary software, or offering unauthorized copies of proprietary software to others.</li>
-              <li>Intercepting or examining the content of messages, files or communications in transit on a data network. </li>
-            </ol>
+        <div class="col-sm-12 col-md-6">
+          <div class="title-welcome">
+            <p>Bienvenido a </p> <h1>SHOP</h1>
           </div>
         </div>
       </div>
-      <!-- Right Column -->
-      <div class="span8">
-        <div class="row">
-          <div class="box">
-            <h3>Free Access:</h3>
-            <!-- Username and Password to be submitted to RADIUS -->
+      
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="form-save-data float-right">
+            <p class="free-wifi">Free Wifi</p>
+            <p>Ingresa tus datos para 'Continuar'.</p>
             <form method="post">
-              <table border="0" cellpadding="0" cellspacing="0">
-                <tbody><tr>
-                  <th>Name:</th>
-                  <td><input class="inputbox" name="fullName" type="text"></td>
-                </tr>
-                <tr>
-                  <th>Email:</th>
-                  <td><input class="inputbox" name="emailAddr" type="email"></td>
-                </tr>
-                <tr>
-                  <th>Phone:</th>
-                  <td><input class="inputbox" name="phoneNumber" type="Integer "></td>
-                </tr>
-
-				<!-- <tr>
-				                  <th>User Name:</th>
-				                  <td><input class="inputbox" name="username"></td>
-				                </tr>
-				
-				<tr>
-				                  <th>Password:</th>
-				                  <td><input class="inputbox" name="password" type="password"></td>
-				                </tr> -->
-				
-
-                <tr>
-                  <td colspan="2"><button class="button" type="SUBMIT">Free WIFI</button></td>
-                </tr>
-              </tbody></table>
+              <div class="form-group">
+                <input type="text" class="form-control" name="fullName" id="nombreCompleto" placeholder="Nombre completo" required/>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="phoneNumber" id="numeroMovil" placeholder="Número móvil"/>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="emailAddr" id="email" placeholder="Correo Electrónico" required/>
+              </div>
+              <button type="submit" class="btn btn-default">Continuar</button>
 
 			  <input type="hidden" name="challenge" value="<?php echo $_GET["challenge"] ?>">
 			  <input type="hidden" name="uamip" value="<?php echo $_GET["uamip"] ?>">
@@ -159,22 +83,50 @@ function print_logon_form() {
 
             </form>
           </div>
-
-      <div style="clear: both"></div>
-      <!-- Footer
-      ==================================================
-      Customize this area however you wish -->
-      <div>
-        <p class="horizontalrule"><small>&copy; 2017 CloudTrax</small></p>
+          <div class="clearfix"></div>
+        </div>
       </div>
-      <!-- /container -->
     </div>
-    <!-- /container -->
+  </div> <!-- page-wrap -->
 
+  <div class="site-footer bg_blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4 col-sm-5 col-md-4 col-lg-3">
+          <img src="images/Magwifico-logo.png" class="logo" alt="MagWifiCo">
+        </div>
+        <div class="col-xs-8 col-sm-7 col-md-8 col-lg-9">
+          <h4>Politica de Privacidad</h4>
+          <p>Al dar click en '<b>continuar</b>'' aceptas explícitamente la <a href="javascript:;" data-toggle="modal" data-target="#myModal">Politica de Privacidad</a> de Magwifico.</p>
+        </div>
+      </div>
+    </div>
+  </div><!-- site-footer -->
 
-</div></body></html>
-
-
+  <!-- modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Politica de Privacidad y autorizacion de datos.</h4>
+      </div>
+      <div class="modal-body">
+        Doy mi consentimiento previo, expreso e informado a Magwifico S.A.S.en adelante MW, para el tratamiento de mis datos personales, así: Derechos del titular de los datos personales (i) Acceder en forma gratuita a los datos proporcionados a MW que hayan sido objeto de tratamiento. (ii) Conocer, actualizar y rectificar mi información frente a datos parciales, inexactos, incompletos, fraccionados, que induzcan a error, o a aquellos cuyo tratamiento esté prohibido o no haya sido autorizado. (iii) Solicitar prueba de la autorización otorgada (iv) Presentar ante la Superintendencia de Industria y Comercio (SIC) quejas por infracciones a lo dispuesto en la normatividad vigente. (v) Revocar la autorización y/o solicitar la supresión del dato cuando en el tratamiento no se respeten los principios, derechos y garantías constitucionales y legales, el cual procederá cuando la autoridad haya determinado que MW en el tratamiento ha incurrido en conductas contrarias a la Constitución y la normatividad vigente. (vi) Abstenerse de responder las preguntas sobre datos sensibles. Tendrá carácter facultativo las respuestas que versen sobre datos sensibles o sobre datos de las niñas y niños y adolescentes. Finalidad: MW podrá utilizar, transferir a terceros, recolectar, almacenar, procesar, usar mi información personal con el objeto de entregarme, ofrecerme y/o venderme productos, servicios, soluciones y cualquier otro requerido para la prestación del servicio contratado, dentro de las cuales se encuentran: a) Telecomunicaciones; b) Servicios de asistencia c) Servicios Digitales d) Contenidos e) Aplicaciones f) Terminales. Entiendo, acepto y autorizo a MW que en territorio nacional y en el extranjero, se suministren mis datos personales a proveedores de productos y servicios, a sociedades del mismo grupo empresarial al que pertenezca, y a terceros que provean servicios o con quien tenga algún tipo de relación, ya sea para: i) Recaudo, ii) Pagos de Ventas, iii) Renovaciones, iv) Reposiciones, v) Soporte Técnico, vi) Servicio al Cliente, vii) Manejo y administración de bases de datos, viii) Solicitar, contratar, cambiar y cancelar servicios prestados por MW directamente o por conducto de terceros; ix) Dar respuestas a peticiones, quejas y recursos, x) Dar respuestas a organismos de control xi) Solicitar factura o información sobre ésta, xii) Solicitar la entrega, reparación o cumplimiento de garantía de productos o servicios, xiii) Recibir publicidad impresa o a través de medios electrónicos. xiv) Utilizar los distintos servicios de sus correspondientes Sitios Web, incluyendo la descarga de contenidos y formatos; xv) Enviar al Titular la notificación de ofertas, avisos y/o mensajes promocionales, xvi) Participar en concursos, rifas, juegos y sorteos; xvii) Procesar pagos, xviii) Recaudar cartera y realizar cobro administrativo prejudicial y judicial, xix) Uso de servicios de telecomunicaciones prestados por terceros, xx) Servicios de atención (Canales de atención al Usuario) xxi) Autenticación y Validación de correos electrónicos; xxii) Telemercadeo; xxiii) Productos de Mercadeo Masivo xxiv) Facturación Electrónica; xxv) Comercialización de diferentes tipos de productos xxvi) Cualquier otra actividad de naturaleza similar a las descritas en los incisos previamente citados. Magwifico S.A.S., tiene como domicilio principal la ciudad de Bogotá en la Cra 18 No. 120-17
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- modal -->
+  
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+</body>
+</html>
 
 
 

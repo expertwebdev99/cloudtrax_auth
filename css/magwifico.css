@@ -1,0 +1,205 @@
+/* 01. Global */
+/* 02. MediaQueries */
+/* 03. fonts */
+/* 04. Helpers */
+/* 05. Sticky Footer */
+/* 06. Site Footer */
+/* 07. Bg image */
+/* 08. Bg Colors */
+/* 09. Logo */
+/* 10. Title Welcome */
+/* 11. Form Save Data */
+
+/* XX. TEMPORAL */
+
+/* 01. Global */
+* {
+ -webkit-font-smoothing: antialiased;
+ color: #ffffff;
+}
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* 02. MediaQueries */
+@media (max-width: 400px) {}
+@media (max-width: 750px) {}
+@media (max-width: 970px) {}
+@media (max-width: 1070px) {}
+
+/* 04. Helpers */
+.clearfix,
+.clearfix:after,
+.clearfix:before {
+  clear: both;
+  content: "";
+}
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+@media (max-width: 400px) {
+  .float-left,
+  .float-right {
+    float: none;
+  }
+}
+
+/* 03. fonts */
+/*
+  font-family: 'Open Sans', sans-serif;
+*/
+
+/* 05. Sticky Footer */
+.page-wrap {
+  margin-bottom: -110px; /* equal to footer height */
+  min-height: 100%;
+  padding-top: 20px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 110px; 
+}
+
+/* 06. Site Footer */
+.site-footer {
+  box-shadow: -0 0 10px 0 #ffffff;
+  padding-top: 10px;
+}
+@media (max-width: 400px) {
+  .site-footer p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 750px) {
+  .site-footer p {
+    font-size: 14px;
+  } 
+}
+
+/* 07. Bg image */
+.bg-full {
+  background-color: transparent;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-full--shop {
+  background-image: url('../images/bg/bg-full--shop.png');
+}
+.bg-full--restaurant {
+  background-image: url('../images/bg/bg-full--restaurant.png');
+}
+
+/* 08. Bg Colors */
+.bg_purple {background-color: #9b59b6;}
+.bg_dark {background-color: #34495e;}
+.bg_blue {background-color: #2980b9;}
+.bg_esmerald {background-color: #2ecc71;}
+.bg_green {background-color: #1abc9c;}
+
+/* 09. Logo */
+.logo {
+  background-color: #DF6E10;
+  display: inline-block;
+  font-size: 24px;
+  height: 90px;
+  text-align: center;
+}
+@media (max-width: 400px) {
+  .logo {
+    height: inherit;
+    width: 100px;
+  }
+}
+@media (max-width: 750px) {
+  .logo {
+    height: inherit;
+    width: 120px;
+  }
+}
+
+/* 10. Title Welcome */
+.title-welcome > p {
+  font-size: 72px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.title-welcome h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+}
+.title-welcome h1 span {
+  font-size: 85%;
+}
+@media (max-width: 400px) {
+  .title-welcome > p {
+    font-size: 32px;
+  }
+  .title-welcome h1 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 750px) {
+  .title-welcome > p {
+    font-size: 32px;
+  }
+  .title-welcome h1 {
+    font-size: 42px;
+  }
+}
+
+/* 11. Form Save Data */
+.form-save-data {
+  margin-top: 50px;
+  max-width: 310px;
+}
+@media (max-width: 400px) {
+  .form-save-data {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 750px) {
+  .form-save-data {
+    margin-top: 40px;
+  }
+}
+.form-save-data .free-wifi {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.form-save-data input {
+  border-radius: 0;
+  border: 0;
+  font-size: 1em;
+}
+.form-save-data button[type="submit"] {
+  background-color: #e67e22;
+  border-radius: 0;
+  border: 0;
+  color: #ffffff;
+  font-size: 1em;
+}
+/* XX. Modal */
+.modal-title {color: #000000;}
+.modal-body {color: #000000;}
+
+/* XX. TEMPORAL */
