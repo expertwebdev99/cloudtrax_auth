@@ -46,6 +46,9 @@ function print_logon_form() {
   <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
   <link rel="stylesheet" href="css/magwifico.css" />
+
+
+
 </head>
 <body>
   <div class="page-wrap bg-full bg-full--shop">
@@ -64,7 +67,7 @@ function print_logon_form() {
           <div class="form-save-data float-right">
             <p class="free-wifi">Free Wifi</p>
             <p>Ingresa tus datos para 'Continuar'.</p>
-			<form method="post">
+			<form method="post" id='myForm'  onsubmit="return validateForm()" >
               <div class="form-group">
                 <input type="text" class="form-control" name="fullName" id="nombreCompleto" placeholder="Nombre completo" required/>
               </div>
@@ -122,12 +125,36 @@ function print_logon_form() {
   </div>
 </div>
   <!-- modal -->
+
+  <script>
+    function validateForm() {
+      var x = document.forms["myForm"]["nombreCompleto"].value;
+      if (x == "") {
+          alert("Nombre completo must be filled out");
+          return false;
+      }
+
+      x = document.forms["myForm"]["email"].value;
+      if (x == "") {
+          alert("Correo Electrónico must be filled out");
+          return false;
+      }
+
+      x = document.forms["myForm"]["email"].value;
+      var atpos = x.indexOf("@");
+      var dotpos = x.lastIndexOf(".");
+      if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+          alert("Not a valid e-mail address");
+          return false;
+      }
+}
+
+  </script>
   
   <script src="js/libs/jquery.min.js"></script>
   <script src="js/libs/bootstrap.min.js"></script>
 </body>
 </html>
-
 
 
 <?php
